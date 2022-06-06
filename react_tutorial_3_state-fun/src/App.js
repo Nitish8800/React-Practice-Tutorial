@@ -123,6 +123,7 @@ function App() {
       {print ? <h1> {data}</h1> : null}
       <input type="text" onChange={getData} />
       <button onClick={() => setPrint(true)}>Print Data</button>
+      
     </div>
   );
 }

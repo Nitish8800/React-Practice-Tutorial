@@ -44,7 +44,6 @@ try{
 finally{
     file.close()
 }
-
 }
 
 console.log(fs)

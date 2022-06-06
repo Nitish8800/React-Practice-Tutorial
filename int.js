@@ -20,15 +20,6 @@
 // func(a,b)
 // console.log(a,b)
 
-// const promises =[3,2,1].map(d=>(
-//     new promises(resolve=>{
-//         setTimeout(()=>{
-//             resolve(d)
-//         },d*1000)
-//     })
-// ))
-
-// promises.race(promises)
 
 
 

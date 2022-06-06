@@ -1,9 +1,9 @@
 import './App.css';
 function App() {
-  let data="anil sidhu";
+  let data="Nitish Kumar";
   function apple()
   {
-  data="peter";
+  // data="peter";
     alert(data);
   }
   return (

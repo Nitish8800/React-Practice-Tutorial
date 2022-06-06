@@ -1,24 +1,24 @@
-let x = ["1","2","15","-7","300"]
-let y = x.sort()
-console.log(y)
+// let x = ["1","2","15","-7","300"]
+// let y = x.sort()
+// console.log(y)
 
 
 
-const f = n => n <=1 ? 1 : n * f(n-1)
+// const f = n => n <=1 ? 1 : n * f(n-1)
 
-let g = f(4)
+// let g = f(4)
 
-console.log(g)
+// console.log(g)
 
-function func(a,b){
-    a+=1
-    b.push(1)
-}
-const a=0
-const b=[]
+// function func(a,b){
+//     a+=1
+//     b.push(1)
+// }
+// const a=0
+// const b=[]
 
-func(a,b)
-console.log(a,b)
+// func(a,b)
+// console.log(a,b)
 
 
 

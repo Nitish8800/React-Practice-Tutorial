@@ -47,30 +47,60 @@
 
 // export default App;
 
-// <------------------------------>/                       Props with Functional Component      </===============->/
+// // <------------------------------>/                       Props with Functional Component      </===============->/
 
-import React, { useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Student from "./components/Student";
-function App() {
-  const [name, setName] = useState("Nitish Kumar");
-  function apple() {
-    alert("hello");
+// import React, { useState } from "react";
+// import logo from "./logo.svg";
+// import "./App.css";
+// import Student from "./components/Student";
+// function App() {
+//   const [name, setName] = useState("Nitish Kumar");
+//   function apple() {
+//     alert("hello");
+//   }
+//   return (
+//     <div className="App">
+//       <h1>Props in React :)</h1>
+//       <Student name={name} />
+//       <button
+//         onClick={() => {
+//           setName("Niku");
+//         }}
+//       >
+//         Update Name
+//       </button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+// // <------------------------------>/                       Props with Class Component      </===============->/
+
+
+import logo from './logo.svg';
+import './App.css';
+import Student from './Student'
+import React from 'react'
+class App extends React.Component {
+  constructor()
+  {
+    super();
+    this.state={
+      name:"Nitish kumar"
+    }
   }
-  return (
-    <div className="App">
-      <h1>Props in React :)</h1>
-      <Student name={name} />
-      <button
-        onClick={() => {
-          setName("Niku");
-        }}
-      >
-        Update Name
-      </button>
-    </div>
-  );
+  render()
+  {
+    return (
+      <div className="App">
+       <h1>Props !</h1>
+       <Student name={this.state.name} email="nk@test.com"></Student>
+       <button onClick={()=>this.setState({name:"Niku"})} >Update Name</button>
+      </div>
+    );
+  }
 }
 
 export default App;

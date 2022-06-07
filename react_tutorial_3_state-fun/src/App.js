@@ -105,27 +105,123 @@
 
 // // <------------------------------>/                      Get Input box value    </===============->/
 
+// import logo from "./logo.svg";
+// import "./App.css";
+// import React, { useState } from "react";
+// function App() {
+//   const [data, setData] = useState(null);
+//   const [print, setPrint] = useState(false);
+
+//   function getData(val) {
+//     console.warn(val.target.value);
+//     setData(val.target.value);
+//     setPrint(false);
+//   }
+//   return (
+//     <div className="App">
+//       {/* <h1>{data}</h1> */}
+//       {print ? <h1> {data}</h1> : null}
+//       <input type="text" onChange={getData} />
+//       <button onClick={() => setPrint(true)}>Print Data</button>
+
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// // <------------------------------>/                 #16 Hide , Show and Toggle in ReactJs   </===============->/
+// import logo from "./logo.svg";
+// import "./App.css";
+// import React, { useState } from "react";
+// function App() {
+//   const [show, setShow] = useState(true);
+//   return (
+//     <div className="App">
+//       {show ? <h1>Hello World !</h1> : null}
+//       {/* <button onClick={()=>setShow(true)} >Show</button>
+//      <button onClick={()=>setShow(false)} >Hide</button> */}
+//       <button onClick={() => setShow(!show)}>Toggle</button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// <------------------------------>/                 #17 Handle Form | checkbox | input field | select  </===============->/
+
+// import logo from "./logo.svg";
+// import "./App.css";
+// import { useState } from "react";
+// function App() {
+//   const [name, setName] = useState("");
+//   const [tnc, setTnc] = useState(false);
+//   const [interest, setInterest] = useState("");
+//   function getFormData(e) {
+//     console.warn(name, tnc, interest);
+//     e.preventDefault();
+//   }
+//   return (
+//     <div className="App">
+//       <h1>Handle Form in React</h1>
+//       <form onSubmit={getFormData}>
+//         <input
+//           type="text"
+//           placeholder="enter name"
+//           value={name}
+//           onChange={(e) => setName(e.target.value)}
+//         />{" "}
+//         <br />
+//         <br />
+//         <select onChange={(e) => setInterest(e.target.value)}>
+//           <option>Select Options</option>
+//           <option>Marvel</option>
+//           <option>DC</option>
+//         </select>{" "}
+//         <br />
+//         <br />
+//         <input type="checkbox" onChange={(e) => setTnc(e.target.checked)} />
+//         <span>Accept Terms and conditions</span>
+//         <br />
+//         <br />
+//         <button type="submit">Submit</button>
+//         <button>Clear</button>
+//       </form>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// <------------------------------>/                 #18 Conditional rendering | If Condition  </===============->/
+
+// import logo from "./logo.svg";
+// import "./App.css";
+// import Profile from "./components/Profile";
+// function App() {
+//   return (
+//     <div className="App">
+//       <Profile />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// <------------------------------>/                 React tutorial in Hindi #19 Basic Form validation  </===============->/
+
 import logo from "./logo.svg";
 import "./App.css";
-import React, { useState } from "react";
+import Login from ".//components/Login";
 function App() {
-  const [data, setData] = useState(null);
-  const [print, setPrint] = useState(false);
-
-  function getData(val) {
-    console.warn(val.target.value);
-    setData(val.target.value);
-    setPrint(false);
-  }
+  const data = true;
   return (
     <div className="App">
-      {/* <h1>{data}</h1> */}
-      {print ? <h1> {data}</h1> : null}
-      <input type="text" onChange={getData} />
-      <button onClick={() => setPrint(true)}>Print Data</button>
-      
+      <Login />
     </div>
   );
 }
 
 export default App;
+
+

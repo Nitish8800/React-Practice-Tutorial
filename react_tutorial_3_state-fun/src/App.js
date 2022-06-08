@@ -211,22 +211,47 @@
 // <------------------------------>/                 React tutorial in Hindi #19 Basic Form validation  </===============->/
 // <------------------------------>/                 React tutorial in Hindi #20 Pass Function as Props </===============->/
 
-import "./App.css";
-// import Login from "./components/Login";
-import User from "./components/User";
-import Student from "./components/Student";
-function App() {
-  function getData() {
-    alert("Hello from app component");
+// import "./App.css";
+// // import Login from "./components/Login";
+// import User from "./components/User";
+// import Student from "./components/Student";
+// function App() {
+//   function getData() {
+//     alert("Hello from app component");
+//   }
+
+//   return (
+//     <div className="App">
+//       {/* <Login /> */}
+//       <User data={getData} />
+//       <Student data={getData} />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// <------------------------------>/                 React tutorial in Hindi #22 Constructor | First life cycle method</===============->/
+
+
+
+import './App.css';
+import React from 'react'
+class App extends React.Component{
+  constructor()
+  {
+    super();
+    this.state={
+      name:"Nitish Kumar"
+    }
+    console.warn("constructor")
   }
-
-  return (
-    <div className="App">
-      {/* <Login /> */}
-      <User data={getData} />
-      <Student data={getData} />
+  render()
+  {
+    console.warn("render")
+    return<div>
+      <h1>Hello World {this.state.name}</h1>
     </div>
-  );
+  }
 }
-
 export default App;

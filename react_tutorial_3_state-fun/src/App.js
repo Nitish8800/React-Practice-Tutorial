@@ -233,25 +233,44 @@
 
 // <------------------------------>/                 React tutorial in Hindi #22 Constructor | First life cycle method</===============->/
 
+// import './App.css';
+// import React from 'react'
+// class App extends React.Component{
+//   constructor()
+//   {
+//     super();
+//     this.state={
+//       name:"Nitish Kumar"
+//     }
+//     console.warn("constructor")
+//   }
+//   render()
+//   {
+//     console.warn("render")
+//     return<div>
+//       <h1>Hello World {this.state.name}</h1>
+//     </div>
+//   }
+// }
+// export default App;
 
+// <------------------------------>/                 React tutorial in Hindi #23 Render life cycle method
+// </===============->/
 
-import './App.css';
-import React from 'react'
-class App extends React.Component{
-  constructor()
-  {
-    super();
-    this.state={
-      name:"Nitish Kumar"
-    }
-    console.warn("constructor")
-  }
-  render()
-  {
-    console.warn("render")
-    return<div>
-      <h1>Hello World {this.state.name}</h1>
+import logo from "./logo.svg";
+import "./App.css";
+import React from "react";
+import User from "./components/User";
+function App() {
+  const [name, setName] = React.useState("Nitish");
+
+  return (
+    <div className="App">
+      <h1>Render Method in React</h1>
+      <User name={name} />
+      <button onClick={() => setName("NiKU")}>Update Name</button>
     </div>
-  }
+  );
 }
+
 export default App;

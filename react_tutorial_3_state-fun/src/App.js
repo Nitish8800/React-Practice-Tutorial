@@ -209,18 +209,24 @@
 // export default App;
 
 // <------------------------------>/                 React tutorial in Hindi #19 Basic Form validation  </===============->/
+// <------------------------------>/                 React tutorial in Hindi #20 Pass Function as Props </===============->/
 
 import "./App.css";
-import Login from ".//components/Login";
+// import Login from "./components/Login";
+import User from "./components/User";
+import Student from "./components/Student";
 function App() {
-  const data = true;
+  function getData() {
+    alert("Hello from app component");
+  }
+
   return (
     <div className="App">
-      <Login />
+      {/* <Login /> */}
+      <User data={getData} />
+      <Student data={getData} />
     </div>
   );
 }
 
 export default App;
-
-

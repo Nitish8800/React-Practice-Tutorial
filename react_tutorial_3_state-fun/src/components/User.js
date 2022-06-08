@@ -17,18 +17,19 @@ class User extends React.Component {
   constructor() {
     super();
     this.state = {
-      email: "niku@test.com",
+      email: "nitish@test.com",
     };
   }
   render() {
-    // console.warn("Render method", this.state.email);
-    console.warn("Render method", this.props);
+    // console.warn("Render method", this.props);
+    console.warn("Render method", this.state.email);
     return (
       <div>
-        <h1>User Component </h1>
-        {/* <button onClick={() => this.setState({ email: "niku@test.com" })}>
+        {/* <h1>User Component {this.props.name}</h1> */}
+        <h1>User Component {this.state.email}</h1>
+        <button onClick={() => this.setState({ email: "niku@test.com" })}>
           Update Email
-        </button> */}
+        </button>
       </div>
     );
   }

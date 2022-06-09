@@ -442,27 +442,46 @@
 
 // // <------------------------------>/                 React tutorial in Hindi #30 useEffect Hook part -2 in ReactJs
 // </===============->/
+// import "./App.css";
+// import React, { useEffect, useState } from "react";
+// function App() {
+//   const [data, setData] = useState(10);
+//   const [count, setCount] = useState(100);
+//   useEffect(() => {
+//     console.warn("use effect data called");
+//   }, [data]);
+
+//   useEffect(() => {
+//     console.warn("use effect count called");
+
+//     alert("count is called    " + count);
+//   }, [count]);
+
+//   return (
+//     <div className="App">
+//       <h1>Count : {count}</h1>
+//       <h1>Data : {data}</h1>
+//       <button onClick={() => setCount(count + 1)}>Update Counter</button>
+//       <button onClick={() => setData(data + 1)}>Update Data</button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// // <------------------------------>/                 React tutorial in Hindi #31 style in ReactJs
+// </===============->/
+
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import style from "./custom.module.css";
+import React from "react";
 function App() {
-  const [data, setData] = useState(10);
-  const [count, setCount] = useState(100);
-  useEffect(() => {
-    console.warn("use effect data called");
-  }, [data]);
-
-  useEffect(() => {
-    console.warn("use effect count called");
-
-    alert("count is called    " + count);
-  }, [count]);
-
+  const styleItem = { color: "red", backgroundColor: "black" };
   return (
     <div className="App">
-      <h1>Count : {count}</h1>
-      <h1>Data : {data}</h1>
-      <button onClick={() => setCount(count + 1)}>Update Counter</button>
-      <button onClick={() => setData(data + 1)}>Update Data</button>
+      <h1 className="primary">Style type 1 in React js</h1>
+      <h1 style={styleItem}>Style type 2 in React js</h1>
+      <h1 className={style.success}>Style type 3 in React js</h1>
     </div>
   );
 }

@@ -406,7 +406,7 @@ import React, { useState } from "react";
 function App() {
   const [data, setData] = useState("Nitish ")
 
-  
+
   return (
     <div className="App">
       <h1>Hooks in React {data}</h1>
@@ -414,6 +414,7 @@ function App() {
       Update State
       </button>
     </div>
+    
   );
 }
 

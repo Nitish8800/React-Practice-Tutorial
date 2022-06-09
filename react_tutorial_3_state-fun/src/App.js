@@ -401,20 +401,38 @@
 
 // // <------------------------------>/                 React tutorial in Hindi #28 Hooks in ReactJs
 // </===============->/
+// import "./App.css";
+// import React, { useState } from "react";
+// function App() {
+//   const [data, setData] = useState("Nitish ")
+
+//   return (
+//     <div className="App">
+//       <h1>Hooks in React {data}</h1>
+//       <button onClick={() => setData("NiKU")}>
+//       Update State
+//       </button>
+//     </div>
+
+//   );
+// }
+
+// export default App;
+
+// // <------------------------------>/                 React tutorial in Hindi #29 useEffect Hook in ReactJs
+// </===============->/
 import "./App.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 function App() {
-  const [data, setData] = useState("Nitish ")
-
-
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    console.warn("use effect");
+  });
   return (
     <div className="App">
-      <h1>Hooks in React {data}</h1>
-      <button onClick={() => setData("NiKU")}>
-      Update State
-      </button>
+      <h1>useEffect in React {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Update Counter</button>
     </div>
-    
   );
 }
 

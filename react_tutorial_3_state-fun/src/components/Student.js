@@ -27,13 +27,27 @@
 
 // // <------------------------------>/                       React tutorial in Hindi #20 Pass Function as Props      </===============->/
 
-function Student(props) {
-  return (
-    <div>
-      <h1>Student Component</h1>
-      <button onClick={props.data}>Call Function</button>
-    </div>
-  );
+// function Student(props) {
+//   return (
+//     <div>
+//       <h1>Student Component</h1>
+//       <button onClick={props.data}>Call Function</button>
+//     </div>
+//   );
+// }
+
+// export default Student;
+
+// // <------------------------------>/                     React tutorial in Hindi #27 componentWillUnmount life cycle method    </===============->/
+
+import React from "react";
+class Student extends React.Component {
+  componentWillUnmount() {
+    alert("componentWillUnmount is called");
+  }
+  render() {
+    return <h1>Student Component</h1>;
+  }
 }
 
 export default Student;

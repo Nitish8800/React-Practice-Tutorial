@@ -289,9 +289,7 @@ class App extends React.Component {
     this.state = { name: "Nitish" };
   }
   componentDidMount() {
-   
     console.warn("componentDidMount");
-    
   }
   render() {
     console.warn("render");

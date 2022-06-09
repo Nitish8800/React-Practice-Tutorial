@@ -454,7 +454,7 @@ function App() {
   useEffect(() => {
     console.warn("use effect count called");
 
-    alert("count is called", count);
+    alert("count is called    " + count);
   }, [count]);
 
   return (

@@ -337,30 +337,58 @@
 
 // export default App;
 
-// <------------------------------>/                 React tutorial in Hindi #26 shouldComponentUpdate life cycle method
+// // <------------------------------>/                 React tutorial in Hindi #26 shouldComponentUpdate life cycle method
+// // </===============->/
+// import "./App.css";
+// import React from "react";
+// class App extends React.Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       count: 0,
+//     };
+//   }
+
+//   shouldComponentUpdate() {
+//     console.warn("shouldComponentUpdate", this.state.count);
+//     if (this.state.count < 5) {
+//       return true;
+//     }
+//   }
+
+//   render() {
+//     return (
+//       <div className="App">
+//         <h1> Should Component Update {this.state.count}</h1>
+//         <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+//           Update Counter
+//         </button>
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
+
+// <------------------------------>/                 React tutorial in Hindi #27 componentWillUnmount life cycle method
 // </===============->/
 import "./App.css";
 import React from "react";
+import Student from "./Student";
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      count: 0,
+      show: true,
     };
   }
-  shouldComponentUpdate() {
-    console.warn("shouldComponentUpdate", this.state.count);
-    if (this.state.count < 5) {
-      return true;
-    }
-  }
-
   render() {
     return (
       <div className="App">
-        <h1> Should Component Update {this.state.count}</h1>
-        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
-          Update Counter
+        {this.state.show ? <Student /> : <h4>Component is removed</h4>}
+        <button onClick={() => this.setState({ show: false })}>
+          {" "}
+          Toogle Student Component
         </button>
       </div>
     );

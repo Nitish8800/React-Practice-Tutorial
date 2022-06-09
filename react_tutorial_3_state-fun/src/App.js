@@ -448,8 +448,15 @@ function App() {
   const [data, setData] = useState(10);
   const [count, setCount] = useState(100);
   useEffect(() => {
-    console.warn("use effect called");
+    console.warn("use effect data called");
   }, [data]);
+
+  useEffect(() => {
+    console.warn("use effect count called");
+
+    alert("count is called", count);
+  }, [count]);
+
   return (
     <div className="App">
       <h1>Count : {count}</h1>

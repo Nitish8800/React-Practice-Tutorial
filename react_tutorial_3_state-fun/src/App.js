@@ -297,7 +297,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Component Did Mount {this.state.name}</h1>
-       
         <button onClick={() => this.setState({ name: "NiKU" })}>Update</button>
       </div>
     );

@@ -27,9 +27,11 @@ class User extends React.Component {
       <div>
         {/* <h1>User Component {this.props.name}</h1> */}
         <h1>User Component {this.state.email}</h1>
-        <button onClick={() => this.setState({ email: "niku@test.com" })}>
+        <button onClick={() => this.setState({ email: "niku@gmail.com" })}>
           Update Email
+          
         </button>
+
       </div>
     );
   }

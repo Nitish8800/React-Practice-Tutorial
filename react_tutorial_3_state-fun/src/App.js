@@ -289,14 +289,18 @@ class App extends React.Component {
     this.state = { name: "Nitish" };
   }
   componentDidMount() {
+   
     console.warn("componentDidMount");
+    
   }
   render() {
     console.warn("render");
 
     return (
       <div className="App">
+      
         <h1>Component Did Mount {this.state.name}</h1>
+       
         <button onClick={() => this.setState({ name: "NiKU" })}>Update</button>
       </div>
     );

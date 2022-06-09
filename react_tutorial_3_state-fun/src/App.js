@@ -350,9 +350,9 @@ class App extends React.Component {
   }
   shouldComponentUpdate() {
     console.warn("shouldComponentUpdate", this.state.count);
-    // if (this.state.count < 5) {
-    //   return true;
-    // }
+    if (this.state.count < 5) {
+      return true;
+    }
   }
 
   render() {

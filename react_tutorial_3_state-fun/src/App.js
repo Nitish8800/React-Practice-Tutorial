@@ -384,6 +384,7 @@ class App extends React.Component {
     };
   }
   render() {
+
     return (
       <div className="App">
         {this.state.show ? <Student /> : <h4>Component is removed</h4>}
@@ -392,6 +393,7 @@ class App extends React.Component {
         </button>
       </div>
     );
+    
   }
 }
 

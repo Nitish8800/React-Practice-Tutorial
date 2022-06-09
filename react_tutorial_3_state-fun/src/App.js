@@ -309,26 +309,58 @@
 // <------------------------------>/                 React tutorial in Hindi #25 componentDidUpdate life cycle method in ReactJs
 // </===============->/
 
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
+// import "./App.css";
+// import React from "react";
+// class App extends React.Component {
+//   constructor() {
+//     super();
+//     console.warn("constructor");
+//     this.state = { count: 0 };
+//   }
+//   componentDidUpdate(preProps, preState, snapshot) {
+//     console.warn("componentDidUpdate", preState);
+//   }
+//   render() {
+//     console.warn("render");
+
+//     return (
+//       <div className="App">
+//         <h1>Component Did Mount {this.state.count}</h1>
+//         <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+//           Update
+//         </button>
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
+
+// <------------------------------>/                 React tutorial in Hindi #26 shouldComponentUpdate life cycle method
+// </===============->/
 import "./App.css";
 import React from "react";
 class App extends React.Component {
   constructor() {
     super();
-    console.warn("constructor");
-    this.state = { count: 0 };
+    this.state = {
+      count: 0,
+    };
   }
-  componentDidUpdate(preProps, preState, snapshot) {
-    console.warn("componentDidUpdate", preState);
+  shouldComponentUpdate() {
+    console.warn("shouldComponentUpdate", this.state.count);
+    if (this.state.count < 5) {
+      return true;
+    }
   }
-  render() {
-    console.warn("render");
 
+  render() {
     return (
       <div className="App">
-        <h1>Component Did Mount {this.state.count}</h1>
+        <h1> Should Component Update {this.state.count}</h1>
         <button onClick={() => this.setState({ count: this.state.count + 1 })}>
-          Update
+          Update Counter
         </button>
       </div>
     );

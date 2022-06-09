@@ -419,21 +419,43 @@
 
 // export default App;
 
-// // <------------------------------>/                 React tutorial in Hindi #29 useEffect Hook in ReactJs
+// // // <------------------------------>/                 React tutorial in Hindi #29 useEffect Hook in ReactJs
+// // </===============->/
+// import "./App.css";
+// import React, { useEffect, useState } from "react";
+// function App() {
+//   const [count, setCount] = useState(0);
+//   useEffect(() => {
+
+//     console.warn("use effect");
+
+//   });
+//   return (
+//     <div className="App">
+//       <h1>useEffect in React {count}</h1>
+//       <button onClick={() => setCount(count + 1)}>Update Counter</button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// // <------------------------------>/                 React tutorial in Hindi #30 useEffect Hook part -2 in ReactJs
 // </===============->/
 import "./App.css";
 import React, { useEffect, useState } from "react";
 function App() {
-  const [count, setCount] = useState(0);
+  const [data, setData] = useState(10);
+  const [count, setCount] = useState(100);
   useEffect(() => {
-    
-    console.warn("use effect");
-    
-  });
+    console.warn("use effect called");
+  }, [data]);
   return (
     <div className="App">
-      <h1>useEffect in React {count}</h1>
+      <h1>Count : {count}</h1>
+      <h1>Data : {data}</h1>
       <button onClick={() => setCount(count + 1)}>Update Counter</button>
+      <button onClick={() => setData(data + 1)}>Update Data</button>
     </div>
   );
 }

@@ -523,7 +523,7 @@
 
 
 
-// // <------------------------------>/                 React tutorial in Hindi #33 Bootstrap in ReactJs
+// // <------------------------------>/                 React tutorial in Hindi #34 List with Bootstrap Table
 // </===============->/
 
 import './App.css';

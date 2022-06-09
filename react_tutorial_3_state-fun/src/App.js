@@ -373,28 +373,44 @@
 // <------------------------------>/                 React tutorial in Hindi #27 componentWillUnmount life cycle method
 // </===============->/
 
-import "./App.css";
-import React from "react";
-import Student from "./components/Student";
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      show: true,
-    };
-  }
-  render() {
+// import "./App.css";
+// import React from "react";
+// import Student from "./components/Student";
+// class App extends React.Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       show: true,
+//     };
+//   }
+//   render() {
 
-    return (
-      <div className="App">
-        {this.state.show ? <Student /> : <h4>Component is removed</h4>}
-        <button onClick={() => this.setState({ show: false })}>
-          Toogle Student Component
-        </button>
-      </div>
-    );
-    
-  }
+//     return (
+//       <div className="App">
+//         {this.state.show ? <Student /> : <h4>Component is removed</h4>}
+//         <button onClick={() => this.setState({ show: false })}>
+//           Toogle Student Component
+//         </button>
+//       </div>
+//     );
+
+//   }
+// }
+
+// export default App;
+
+// // <------------------------------>/                 React tutorial in Hindi #28 Hooks in ReactJs
+// </===============->/
+import "./App.css";
+import React, { useState } from "react";
+function App() {
+  const [data, setData] = useState("Nitish ");
+  return (
+    <div className="App">
+      <h1>Hooks in React {data}</h1>
+      <button onClick={() => setData("NiKU")}>Update State</button>
+    </div>
+  );
 }
 
 export default App;

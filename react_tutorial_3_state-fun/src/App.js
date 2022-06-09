@@ -408,7 +408,9 @@ function App() {
   return (
     <div className="App">
       <h1>Hooks in React {data}</h1>
-      <button onClick={() => setData("NiKU")}>Update State</button>
+      <button onClick={() => setData("NiKU")}>
+      Update State
+      </button>
     </div>
   );
 }

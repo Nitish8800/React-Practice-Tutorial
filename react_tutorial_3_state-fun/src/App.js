@@ -254,24 +254,53 @@
 // }
 // export default App;
 
-// <------------------------------>/                 React tutorial in Hindi #23 Render life cycle method
+// // <------------------------------>/                 React tutorial in Hindi #23 Render life cycle method
+// // </===============->/
+
+// import logo from "./logo.svg";
+// import "./App.css";
+// import React from "react";
+// import User from "./components/User";
+// function App() {
+//   const [name, setName] = React.useState("Nitish");
+
+//   return (
+//     <div className="App">
+//       <h1>Render Method in React</h1>
+//       {/* <User name={name} /> */}
+//       {/* <button onClick={() => setName("NiKU")}>Update Name</button> */}
+//       <User />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// <------------------------------>/                 React tutorial in Hindi #24 componentDidMount life cycle method in ReactJs
 // </===============->/
 
 import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
-import User from "./components/User";
-function App() {
-  const [name, setName] = React.useState("Nitish");
+class App extends React.Component {
+  constructor() {
+    super();
+    console.warn("constructor");
+    this.state = { name: "Nitish" };
+  }
+  componentDidMount() {
+    console.warn("componentDidMount");
+  }
+  render() {
+    console.warn("render");
 
-  return (
-    <div className="App">
-      <h1>Render Method in React</h1>
-      {/* <User name={name} /> */}
-      {/* <button onClick={() => setName("NiKU")}>Update Name</button> */}
-      <User />
-    </div>
-  );
+    return (
+      <div className="App">
+        <h1>Component Did Mount {this.state.name}</h1>
+        <button onClick={() => this.setState({ name: "NiKU" })}>Update</button>
+      </div>
+    );
+  }
 }
 
 export default App;

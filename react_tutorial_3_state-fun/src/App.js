@@ -736,28 +736,59 @@
 
 // <------------------------------>/                 React tutorial in Hindi #40 useMemo Hook
 // </===============->/
+// import "./App.css";
+// import React, { useState } from "react";
+// function App() {
+//   const [count, setData] = useState(0);
+//   const [item, setItem] = useState(10);
+
+//   const newApple = React.useMemo(
+//     function appleTime() {
+//       console.warn("Hello");
+//       return count * 100;
+//     },
+//     [item]
+//   );
+//   return (
+//     <div className="App">
+//       <h1>Count : {count}</h1>
+//       <h2> Items : {item}</h2>
+//       <h2> newApple : {newApple}</h2>
+
+//       <button onClick={() => setData(count + 1)}>Update Count</button>
+//       <button onClick={() => setItem(item * 10)}>Update Item</button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// <------------------------------>/                 React tutorial in Hindi #41 Ref with Example
+// </===============->/
 import "./App.css";
-import React, { useState } from "react";
-function App() {
-  const [count, setData] = useState(1);
-  const [item, setItem] = useState(20);
-
-  const newApple = React.useMemo(
-    function appleTime() {
-      console.warn("Hello");
-      return 100 * count;
-    },
-    [item]
-  );
-  return (
-    <div className="App">
-      <h1>Count{count}</h1>
-      <h2> Items : {newApple}</h2>
-
-      <button onClick={() => setData(count + 1)}>Update Count</button>
-      <button onClick={() => setItem(item * 10)}>Update Item</button>
-    </div>
-  );
+import React, { createRef } from "react";
+class App extends React.Component {
+  constructor() {
+    super();
+    this.inputRef = createRef();
+  }
+  componentDidMount() {
+    // console.warn(this.inputRef.current.value="1000")
+  }
+  getVal() {
+    console.warn(this.inputRef.current.value);
+    this.inputRef.current.style.color = "red";
+    this.inputRef.current.style.backgroundColor = "black";
+  }
+  render() {
+    return (
+      <div className="App">
+        <h1>Ref in React </h1>
+        <input type="text" ref={this.inputRef} />
+        <button onClick={() => this.getVal()}>Check Ref</button>
+      </div>
+    );
+  }
 }
 
 export default App;

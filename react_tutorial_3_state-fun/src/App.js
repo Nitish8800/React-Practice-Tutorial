@@ -751,15 +751,13 @@ function App() {
   );
   return (
     <div className="App">
-      <h1>Hooks in React {count}</h1>
-      {newApple}
-      <button onClick={() => setData(count + 1)}>Update State</button>
-      <button onClick={() => setItem(item * 10)}>Update State</button>
+      <h1>Count{count}</h1>
+      <h2> Items : {newApple}</h2>
+
+      <button onClick={() => setData(count + 1)}>Update Count</button>
+      <button onClick={() => setItem(item * 10)}>Update Item</button>
     </div>
   );
 }
 
 export default App;
-
-
-

@@ -703,15 +703,12 @@
 
 // export default App;
 
-
-
-
 // <------------------------------>/                 React tutorial in Hindi #39 Pure component in ReactJs
 // </===============->/
 
 import "./App.css";
 import React from "react";
-import Counter from "./Counter";
+import Counter from "./components/Counter";
 class App extends React.Component {
   constructor() {
     super();
@@ -720,6 +717,8 @@ class App extends React.Component {
     };
   }
   render() {
+ 
+
     return (
       <div className="App">
         <Counter count={this.state.count} />
@@ -736,4 +735,3 @@ class App extends React.Component {
 }
 
 export default App;
-

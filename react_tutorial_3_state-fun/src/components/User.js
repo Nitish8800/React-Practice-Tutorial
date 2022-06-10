@@ -38,3 +38,17 @@
 // }
 
 // export default User;
+
+// <------------------------------>/                 React tutorial in Hindi #38 Send Data Child to Parent Component
+// </===============->/
+function User(props) {
+  const name = "Nitish Kumar";
+  return (
+    <div>
+      <h1>User Name is : {name} </h1>
+      <button onClick={() => props.getData(name)}>Click Me</button>
+    </div>
+  );
+}
+
+export default User;

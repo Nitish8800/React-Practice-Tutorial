@@ -654,31 +654,50 @@
 // export default App;
 
 // // <------------------------------>/                 React tutorial in Hindi #37 fragment in ReactJs
+// // </===============->/
+// import "./App.css";
+// import React from "react";
+// import Cols from "./components/Cols";
+// function App() {
+//   return (
+//     <>
+//       <h1>React Fragment</h1>
+//       <table>
+//         <tbody>
+//           <tr>
+//             <Cols />
+//             <Cols />
+//             <Cols />
+//             <Cols />
+//             <Cols />
+//             <Cols />
+//             <Cols />
+//             <Cols />
+//             <Cols />
+//             <Cols />
+//           </tr>
+//         </tbody>
+//       </table>
+//     </>
+//   );
+// }
+
+// export default App;
+
+// // <------------------------------>/                 React tutorial in Hindi #38 Send Data Child to Parent Component
 // </===============->/
-import "./App.css";
 import React from "react";
-import Cols from "./components/Cols";
+import "./App.css";
+import User from "./components/User";
 function App() {
+  function getName(name) {
+    alert(name);
+  }
   return (
-    <>
-      <h1>React Fragment</h1>
-      <table>
-        <tbody>
-          <tr>
-            <Cols />
-            <Cols />
-            <Cols />
-            <Cols />
-            <Cols />
-            <Cols />
-            <Cols />
-            <Cols />
-            <Cols />
-            <Cols />
-          </tr>
-        </tbody>
-      </table>
-    </>
+    <div className="App">
+      <h1>Lifting State Up</h1>
+      <User getData={getName} />
+    </div>
   );
 }
 

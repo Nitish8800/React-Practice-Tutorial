@@ -706,30 +706,60 @@
 // <------------------------------>/                 React tutorial in Hindi #39 Pure component in ReactJs
 // </===============->/
 
+// import "./App.css";
+// import React from "react";
+// import Counter from "./components/Counter";
+// class App extends React.Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       count: 1,
+//     };
+//   }
+//   render() {
+//     return (
+//       <div className="App">
+//         <Counter count={this.state.count} />
+//         <button
+//           onClick={() => {
+//             this.setState({ count: this.state.count + 1 });
+//           }}
+//         >
+//           Update Count
+//         </button>
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
+
+// <------------------------------>/                 React tutorial in Hindi #40 useMemo Hook
+// </===============->/
 import "./App.css";
-import React from "react";
-import Counter from "./components/Counter";
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      count: 1,
-    };
-  }
-  render() {
-    return (
-      <div className="App">
-        <Counter count={this.state.count} />
-        <button
-          onClick={() => {
-            this.setState({ count: this.state.count + 1 });
-          }}
-        >
-          Update Count
-        </button>
-      </div>
-    );
-  }
+import React, { useState } from "react";
+function App() {
+  const [count, setData] = useState(1);
+  const [item, setItem] = useState(20);
+
+  const newApple = React.useMemo(
+    function appleTime() {
+      console.warn("Hello");
+      return 100 * count;
+    },
+    [item]
+  );
+  return (
+    <div className="App">
+      <h1>Hooks in React {count}</h1>
+      {newApple}
+      <button onClick={() => setData(count + 1)}>Update State</button>
+      <button onClick={() => setItem(item * 10)}>Update State</button>
+    </div>
+  );
 }
 
 export default App;
+
+
+

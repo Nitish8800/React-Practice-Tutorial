@@ -610,7 +610,7 @@
 //       ],
 //     },
 //   ];
-  
+
 //   return (
 //     <div className="App">
 //       <h1>List with Nested Array</h1>
@@ -653,103 +653,33 @@
 
 // export default App;
 
-
-
-// // <------------------------------>/                 React tutorial in Hindi #36 Reuse component in loop
+// // <------------------------------>/                 React tutorial in Hindi #37 fragment in ReactJs
 // </===============->/
 import "./App.css";
 import React from "react";
-import { Table } from "react-bootstrap";
+import Cols from "./components/Cols";
 function App() {
-  const users = [
-    {
-      name: "Anil",
-      email: "anil@test.com",
-      address: [
-        { hm: "11", city: "Noida", country: "India" },
-        { hm: "1", city: "Gurgaon", country: "India" },
-        { hm: "3", city: "Noida", country: "India" },
-        { hm: "5", city: "Delhi", country: "India" },
-      ],
-    },
-    {
-      name: "Burce",
-      email: "bruce@test.com",
-      address: [
-        { hm: "101", city: "Noida", country: "India" },
-        { hm: "175", city: "Gurgaon", country: "India" },
-        { hm: "283", city: "Noida", country: "India" },
-        { hm: "435", city: "Delhi", country: "India" },
-      ],
-    },
-    {
-      name: "Peter",
-      email: "peter@test.com",
-      address: [
-        { hm: "1041", city: "Noida", country: "India" },
-        { hm: "120", city: "Gurgaon", country: "India" },
-        { hm: "253", city: "Noida", country: "India" },
-        { hm: "458", city: "Delhi", country: "India" },
-      ],
-    },
-    {
-      name: "Sam",
-      email: "sam@test.com",
-      address: [
-        { hm: "101543", city: "Noida", country: "India" },
-        { hm: "15430", city: "Gurgaon", country: "India" },
-        { hm: "25433", city: "Noida", country: "India" },
-        { hm: "45435", city: "Delhi", country: "India" },
-      ],
-    },
-  ];
-  
   return (
-    <div className="App">
-      <h1>List with Nested Array</h1>
-      <Table variant="dark">
+    <>
+      <h1>React Fragment</h1>
+      <table>
         <tbody>
           <tr>
-            <td>S.N</td>
-            <td>Name</td>
-            <td>Email</td>
-            <td>Address</td>
+            <Cols />
+            <Cols />
+            <Cols />
+            <Cols />
+            <Cols />
+            <Cols />
+            <Cols />
+            <Cols />
+            <Cols />
+            <Cols />
           </tr>
-          {users.map((item, i) => (
-            <tr key={i}>
-              <td>{i + 1}</td>
-              <td>{item.name}</td>
-              <td>{item.email}</td>
-
-              <td>
-                {/*  */}
-                <Table variant="dark">
-                  <tbody>
-                    {item.address.map((data) => (
-                      <tr>
-                        <td>{data.hm}</td>
-                        <td>{data.city}</td>
-                        <td>{data.country}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </Table>
-                {/*  */}
-              </td>
-            </tr>
-          ))}
         </tbody>
-      </Table>
-    </div>
+      </table>
+    </>
   );
 }
 
 export default App;
-
-
-
-
-
-
-
-

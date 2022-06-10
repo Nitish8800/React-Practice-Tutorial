@@ -686,19 +686,19 @@
 
 // // <------------------------------>/                 React tutorial in Hindi #38 Send Data Child to Parent Component
 // </===============->/
-import React from "react";
-import "./App.css";
-import User from "./components/User";
-function App() {
-  function getName(name) {
-    alert(name);
-  }
-  return (
-    <div className="App">
-      <h1>Lifting State Up</h1>
-      <User getData={getName} />
-    </div>
-  );
-}
+// import React from "react";
+// import "./App.css";
+// import User from "./components/User";
+// function App() {
+//   function getName(name) {
+//     alert(name);
+//   }
+//   return (
+//     <div className="App">
+//       <h1>Lifting State Up</h1>
+//       <User getData={getName} />
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
